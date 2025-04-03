@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Richard M. Nelson, Ph.D.">
-<meta name="dcterms.date" content="2025-03-23">
+<meta name="dcterms.date" content="2025-04-03">
 
 <title>On the Qualification of Assays   for   SAR Development    </title>
 <style>
@@ -3471,7 +3471,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Date</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">23 March 2025</p>
+        <p class="date">03 April 2025</p>
       </div>
     </div>
     
@@ -4210,7 +4210,7 @@ y = LA + \frac{UA - LA}{1+exp10 \left( \left[ -log_{10}(x) -
 <h2 class="anchored" data-number="8.1" data-anchor-id="sec-goodness"><span class="header-section-number">8.1</span> Commonly used goodness-of-fit statistics</h2>
 <div class>
 <p>The <strong>coefficient of determination, R<sup>2</sup></strong>, a unitless statistic often calculated for nonlinear models, is strictly valid only for linear models (<span class="citation" data-cites="spiess_evaluation_2010"><a href="#ref-spiess_evaluation_2010" role="doc-biblioref">55</a></span>, <span class="citation" data-cites="minitab_blog_editor_why_nodate"><a href="#ref-minitab_blog_editor_why_nodate" role="doc-biblioref">56</a></span>). Where <span class="math inline">\(TSS\)</span> and <span class="math inline">\(RSS\)</span> are the total and residual sum of squares, <span class="math inline">\(n\)</span> is the total number of observations, <span class="math inline">\(y_i\)</span> is the observed value, <span class="math inline">\(\bar{y}\)</span> is the mean of observed values, and <span class="math inline">\(f(x_i)\)</span> is the model’s predicted (fitted) value (<span class="citation" data-cites="spiess_evaluation_2010"><a href="#ref-spiess_evaluation_2010" role="doc-biblioref">55</a></span>): <span id="eq-rsqr"><span class="math display">\[R^2=1-\frac{TSS}{RSS}=1-\frac{\sum_{i=1}^{n}(y_i-\bar{y})^2}{\sum_{i=1}^{n}(y_i-f(x_i))^2} \tag{7}\]</span></span></p>
-<p>The <strong>Chi-squared statistic</strong>, where <span class="math inline">\(y_i\)</span> is the observed value and <span class="math inline">\(f(x_i)\)</span> is the model’s predicted value (<span class="citation" data-cites="motulsky_intuitive_2014"><a href="#ref-motulsky_intuitive_2014" role="doc-biblioref">16</a></span>, p 238): <span class="math display">\[\chi^2 = \sum_{i=n}^{n}\frac{(y_i-f(x_i))^2}{f(x_i)}\hspace{1cm}\]</span></p>
+<p>The <strong>Chi-squared statistic</strong>, where <span class="math inline">\(y_i\)</span> is the observed value and <span class="math inline">\(f(x_i)\)</span> is the model’s predicted value (<span class="citation" data-cites="motulsky_intuitive_2014"><a href="#ref-motulsky_intuitive_2014" role="doc-biblioref">16</a></span>, p 238): <span class="math display">\[\chi^2 = \sum_{i=1}^{n}\frac{(y_i-f(x_i))^2}{f(x_i)}\hspace{1cm}\]</span></p>
 <p>The <strong>root mean square error</strong>, RMSE, is the standard deviation of the residuals, in units of <span class="math inline">\(y\)</span> (<span class="citation" data-cites="noauthor_standard_nodate"><a href="#ref-noauthor_standard_nodate" role="doc-biblioref">57</a></span>): <span class="math display">\[RMSE=\sqrt{\frac{\sum_{i=1}^{n}(y_i-f(x_i))^2}{n-1}}\hspace{-1cm}\]</span></p>
 <p>The <strong>Sy.x statistic</strong>, similar to RMSE but with denominator <span class="math inline">\(n-K\)</span>, where <span class="math inline">\(K\)</span> is the number of parameters in the fit model (<span class="citation" data-cites="noauthor_standard_nodate"><a href="#ref-noauthor_standard_nodate" role="doc-biblioref">57</a></span>): <span class="math display">\[Sy.x=\sqrt{\frac{\sum_{i=1}^{n}(y_i-f(x_i))^2}{n-K}}\hspace{-1cm}\]</span></p>
 </div>
@@ -4229,11 +4229,11 @@ SEM=\frac{SD}{\sqrt{n}}
 <div class>
 <p>There are several statistical equations for estimating central tendency of samples drawn from populations having different distributions, two of which are relevant to pIC<sub>50</sub> and IC<sub>50</sub> values: the arithmetic mean and the geometric mean (<span class="citation" data-cites="david_j_sheskin_handbook_2007"><a href="#ref-david_j_sheskin_handbook_2007" role="doc-biblioref">21</a></span>, p 9).</p>
 <p>The <strong>arithmetic mean</strong> of a sample applies to populations that follow a normal (Gaussian) distribution, as do pIC<sub>50</sub> values: <span id="eq-mean"><span class="math display">\[
-\bar{x}=\frac{1}{n}\sum_{i=n}^{n}x_i
+\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i
 \tag{10}\]</span></span></p>
 <p>The <strong>geometric mean</strong> is a measure of central tendency for populations that follow a log-normal distribution, as do IC<sub>50</sub> values. The geometric mean can be calculated as the antilog of the arithmetic mean of the logarithms of values, or as the n<sup>th</sup> root of the product of values:</p>
 <p><span id="eq-geomean"><span class="math display">\[\begin{aligned}
-geomean(x) &amp; = exp10 \! \left( \frac{1}{n}\sum_{i=n}^{n}log_{10}(x_i)
+geomean(x) &amp; = exp10 \! \left( \frac{1}{n}\sum_{i=1}^{n}log_{10}(x_i)
 \right) \\
 \\
 &amp;= \left( {\prod_{i=1}^n x_i}\right )^\frac{1}{n} \\
